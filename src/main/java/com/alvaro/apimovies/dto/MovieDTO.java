@@ -13,7 +13,7 @@ import javax.validation.constraints.Size;
 public class MovieDTO {
     
     @NotBlank(message = "Debe completar el nombre")
-    @Size(max = 50, message="El nombre como máximo debe tener {max} caracteres")
+    @Size(max = 200, message="El nombre como máximo debe tener {max} caracteres")
     private String name;
 
     @NotNull(message = "Debe completar un valor de ranking")
