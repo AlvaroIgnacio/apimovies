@@ -48,6 +48,11 @@ Algunas de las variables de entorno configurables son:
 La BD estará creada en el host, por lo cual cualquier esquema de backup en uso se puede aplicar a esta BD.  
 Al ser un *bind mount* la bd sigue existiendo al detener el contenedor. Además puede ser accedida por otras aplicaciones, herramientas de consulta y administración.  
 
+## Referencias
+[Build your Java image](https://docs.docker.com/language/java/build-images/)
+[10 best practices to build a Java container with Docker](https://snyk.io/blog/best-practices-to-build-java-containers-with-docker/)
+[Externalizing properties of a spring boot application on docker ](https://www.linkedin.com/pulse/externalizing-properties-spring-boot-application-docker-phani-bushan)
+[Spring Boot Docker](https://spring.io/guides/topicals/spring-boot-docker/)
 
 ## Licencia
 [MIT](https://choosealicense.com/licenses/mit/)
