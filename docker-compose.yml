@@ -5,6 +5,7 @@ services:
       context: .
     depends_on:
       - apimovies_bd
+    restart: on-failure
     ports:
       - 8000:8000
       - 8084:8080
