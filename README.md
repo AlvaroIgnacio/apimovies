@@ -15,8 +15,7 @@ Levantar el proyecto con:
 ```bash
 docker-compose up
 ```
-Docker compose descarga e instala una imagen de mysql como volumen externo (consultar el docker-compose para ver la carpeta de instalación).
-Además docker crea la base de datos del proyecto.  
+Docker compose descarga e instala una imagen de mysql y crea la base de datos del proyecto.  
 El jar ejecutable en Java tiene embebido un Tomcat 9. Al arrancar por primera vez se crea un conjunto de datos de prueba, incluyendo películas, actores y comentarios.
 
 ## Uso
@@ -40,14 +39,14 @@ Opté por crear un _bind mount_ para la base de datos.  Esto permite acceder a l
 
 ## Variables de entorno
 Algunas de las variables de entorno configurables son:  
-**SPRING_DATASOURCE_USERNAME**: el usuario que se conectará con la BD  
-**SPRING_DATASOURCE_PASSWORD**: contraseña de dicho usuario  
-**SPRING_JPA_SHOW_SQL**: permite definir si se muestran las sentencias SQL generadas por la aplicación. Los valores posibles son TRUE o FALSE  
-**LOGGING_LEVEL_ROOT**: nivel de detalle con que trabaja el generador de logs. Los valores posibles son: ERROR, WARN, INFO, DEBUG, TRACE  
+- **SPRING_DATASOURCE_USERNAME**: el usuario que se conectará con la BD  
+- **SPRING_DATASOURCE_PASSWORD**: contraseña de dicho usuario  
+- **SPRING_JPA_SHOW_SQL**: permite definir si se muestran las sentencias SQL generadas por la aplicación. Los valores posibles son TRUE o FALSE  
+- **LOGGING_LEVEL_ROOT**: nivel de detalle con que trabaja el generador de logs. Los valores posibles son: ERROR, WARN, INFO, DEBUG, TRACE  
 
 ## Estrategias de backup y recuperación para la persistencia de datos de la aplicación
 La BD estará creada en el host, por lo cual cualquier esquema de backup en uso se puede aplicar a esta BD.  
-Al ser un _bind mount_ la bd sigue existiendo al detener el contenedor. Además puede ser accedida por otras aplicaciones, herramientas de consulta y administración.  
+Al ser un *bind mount* la bd sigue existiendo al detener el contenedor. Además puede ser accedida por otras aplicaciones, herramientas de consulta y administración.  
 
 
 ## Licencia
