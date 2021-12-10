@@ -1,5 +1,7 @@
 package com.alvaro.apimovies.repository;
 
+import java.util.List;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -16,5 +18,7 @@ public interface ActorRepository extends JpaRepository<Actor, Long> {
     ActorProjection findProjectedById(Long actorId);
 
 	Page<ActorProjection> findByLastNameIgnoreCase(Pageable page, String lastName);
+	
+	List<Actor> findByLastNameIgnoreCaseAndNameIgnoreCase(String lastName, String name);
     
 }
