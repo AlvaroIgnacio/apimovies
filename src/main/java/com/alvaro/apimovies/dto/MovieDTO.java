@@ -12,17 +12,17 @@ import javax.validation.constraints.Size;
 
 public class MovieDTO {
     
-    @NotBlank(message = "Debe proveer un nombre, no puede estar en blanco")
-    @Size(max = 50, message="El nombre como máximo debe tener 50 caracteres")
+    @NotBlank(message = "Debe completar el nombre")
+    @Size(max = 50, message="El nombre como máximo debe tener {max} caracteres")
     private String name;
 
-    @NotNull(message = "Debe proveer un valor de ranking")
+    @NotNull(message = "Debe completar un valor de ranking")
     @Min(value = 1, message="Debe ser como mínimo 1")
     @Max(value = 10, message="Debe ser como máximo 10")
     private Integer ranking;
 
     @Valid
-    @NotEmpty(message = "La lista de actores es requerida")
+    @NotEmpty(message = "Debe completar la lista de actores ")
     private List<ActorDTO> actors;
 
     public MovieDTO() {

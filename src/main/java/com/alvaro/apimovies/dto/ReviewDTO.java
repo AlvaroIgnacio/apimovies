@@ -5,11 +5,11 @@ import javax.validation.constraints.Size;
 
 public class ReviewDTO {
 
-    @NotBlank(message = "El comentario no puede estar en blanco")
+    @NotBlank(message = "Debe completar el comentario")
     @Size(max = 200, message="El comentario no debe superar los {max} caracteres")
     private String comment;
 
-    @NotBlank(message = "El nombre de usuario no puede estar en blanco")
+    @NotBlank(message = "Debe completar el nombre de usuario")
     private String username;
 
     public ReviewDTO() {
