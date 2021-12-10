@@ -1,7 +1,6 @@
 # API de peliculas
 
-Esta API de peliculas es mi proyecto final del curso 
-"Taller "Docker para Administradores/as de Sistemas y Desarrolladores/as" 2021"  
+Esta API de peliculas es mi proyecto final del curso "Taller "Docker para Administradores/as de Sistemas y Desarrolladores/as" 2021" dictado en la [Universidad Nacional del Comahue](https://web.curza.uncoma.edu.ar/) por Leandro Boisselier.  
 
 La API permite consultar películas, actores, y además agregar películas y comentarios sobre las mismas.
 Es un proyecto implementado con el lenguaje Java 11, framework Spring Boot y una base de datos Mysql versión 5.7  
