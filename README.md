@@ -8,7 +8,7 @@ El proyecto viene listo para ser instalado y ejecutado con datos de prueba.
 
 ## Instalación
 
-Descargar el proyecto (git clone o descargar el zip).
+Descargar el proyecto (git clone o descargar el zip).  
 Construir la imagen con:  
 
 ```bash
@@ -17,6 +17,7 @@ docker-compose up --build
   
 Durante este proceso puede ser que la aplicación se reinicie varias veces. Esto es normal ya que la misma debe esperar que Mysql se inicie, cree el esquema y usuario requerido.  
 Docker compose descarga e instala una imagen de mysql y crea la base de datos del proyecto.  
+
 El jar ejecutable en Java tiene embebido un Tomcat 9. Al arrancar por primera vez se crea un conjunto de datos de prueba, incluyendo películas, actores y comentarios.  
 
 Para posteriores inicios basta con:
