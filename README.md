@@ -34,6 +34,21 @@ http://localhost:8084/movies
 
 El archivo "API peliculas.postman_collection.json" contiene casos de prueba para todas las funciones de la API (importar con Postman).
 
+## Volúmenes
+Opté por crear un _bind mount_ para la base de datos.  Esto permite acceder a la BD como a cualquier otra instalada en el host, ya sea por consola o con herramientas como [Workbench](https://www.mysql.com/products/workbench/)
+../data/apimovies es el directorio donde se creará por defecto la BD. Esto se puede cambiar editando el archivo docker-compose.yml
+
+## Variables de entorno
+Algunas de las variables de entorno configurables son:
+**SPRING_DATASOURCE_USERNAME**: el usuario que se conectará con la BD
+**SPRING_DATASOURCE_PASSWORD**: contraseña de dicho usuario
+**SPRING_JPA_SHOW_SQL**: permite definir si se muestran las sentencias SQL generadas por la aplicación. Los valores posibles son TRUE o FALSE
+**LOGGING_LEVEL_ROOT**: nivel de detalle con que trabaja el generador de logs. Los valores posibles son: ERROR, WARN, INFO, DEBUG, TRACE
+
+## Estrategias de backup y recuperación para la persistencia de datos de la aplicación
+La BD estará creada en el host, por lo cual cualquier esquema de backup en uso se puede aplicar a esta BD. 
+Al ser un _bind mount_ la bd sigue existiendo al detener docker. Además puede ser accedida por otras aplicaciones, herramientas de consulta y administración.
+
 
 ## Licencia
 [MIT](https://choosealicense.com/licenses/mit/)
